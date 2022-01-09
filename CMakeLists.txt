@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.20)
+project(Main)
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED true)
+set(CMAKE_BUILD_TYPE "Debug")
+find_package(Threads REQUIRED)
+add_executable(${PROJECT_NAME} main.c)
+target_link_libraries(${PROJECT_NAME} PUBLIC pthread)
